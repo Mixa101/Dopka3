@@ -4,7 +4,8 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 async def start_handler(message: types.Message):
     keyboard = InlineKeyboardMarkup(resize_keyboard = True)
     keyboard.add(InlineKeyboardButton(text="контакты", callback_data="contacts"), InlineKeyboardButton(text="Наш адресс", callback_data="adress"),
-                 InlineKeyboardButton(text="наш сайт", callback_data="site"), InlineKeyboardButton(text="Меню", callback_data="menu"))
+                 InlineKeyboardButton(text="наш сайт", callback_data="site"), InlineKeyboardButton(text="Меню", callback_data="menu"),
+                 InlineKeyboardButton(text="Оставить отзыв", callback_data="review"))
     
     await message.answer("Добро пожаловать в нашу пиццерию!", reply_markup=keyboard)
 
